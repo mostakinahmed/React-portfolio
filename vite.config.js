@@ -11,4 +11,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: "dist",   // ensure build goes to dist for Vercel
+  },
+  base: "./",         // ⚡ crucial: makes JS/CSS load correctly on Vercel
 });
