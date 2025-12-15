@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle 2";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -26,7 +27,7 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-sm" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -83,6 +84,9 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
+          </div>
+          <div className="mt-5 ">
+            <ThemeToggle />
           </div>
         </div>
       </div>
