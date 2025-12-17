@@ -36,7 +36,7 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> Mosu's </span>{" "}
+            <span className="text-glow text-foreground/80 "> Mosu's </span>{" "}
             Portfolio
           </span>
         </a>
@@ -47,26 +47,26 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              className="text-foreground/90 hover:text-primary transition-colors duration-300"
             >
               {item.name}
             </a>
           ))}
-     
-          <div className="flex items-center gap-4">
+
+          <div className="flex items-center gap-6 -mt-0.5">
             {/* Download Button */}
             <a
               href="https://drive.google.com/drive/folders/1EipzLu88u3oyM-qLtYn2EPcGUKbOCKS6"
               target="_blank"
               rel="noopener noreferrer"
-              className="
+              className=" hover:text-primary  
       inline-flex items-center gap-2
       rounded-md border border-border
       bg-background px-4 py-1
-      text-sm font-medium text-foreground
-      shadow-sm
+      text-sm font-medium text-foreground/90 
+      shadow-xs
       transition-all duration-200
-      hover:bg-muted hover:shadow-md
+      hover:bg-muted hover:shadow
       active:scale-95
     "
             >
@@ -78,14 +78,14 @@ export const Navbar = () => {
               href="https://github.com/your-username/your-repo"
               target="_blank"
               rel="noopener noreferrer"
-              className="
+              className="hover:text-primary 
       inline-flex items-center gap-2
       rounded-md border border-border
       bg-background px-4 py-1
-      text-sm font-medium text-foreground
-      shadow-sm
+      text-sm font-medium text-foreground/90 
+      shadow-xs
       transition-all duration-200
-      hover:bg-muted hover:shadow-md
+      hover:bg-muted hover:shadow
       active:scale-95
     "
             >
