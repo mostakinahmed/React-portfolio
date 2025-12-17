@@ -52,6 +52,46 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
+     
+          <div className="flex items-center gap-4">
+            {/* Download Button */}
+            <a
+              href="https://drive.google.com/drive/folders/1EipzLu88u3oyM-qLtYn2EPcGUKbOCKS6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+      inline-flex items-center gap-2
+      rounded-md border border-border
+      bg-background px-4 py-1
+      text-sm font-medium text-foreground
+      shadow-sm
+      transition-all duration-200
+      hover:bg-muted hover:shadow-md
+      active:scale-95
+    "
+            >
+              ⬇ Download
+            </a>
+
+            {/* GitHub Button */}
+            <a
+              href="https://github.com/your-username/your-repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+      inline-flex items-center gap-2
+      rounded-md border border-border
+      bg-background px-4 py-1
+      text-sm font-medium text-foreground
+      shadow-sm
+      transition-all duration-200
+      hover:bg-muted hover:shadow-md
+      active:scale-95
+    "
+            >
+              ⭐ GitHub
+            </a>
+          </div>
         </div>
 
         {/* mobile nav */}
