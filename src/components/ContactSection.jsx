@@ -41,20 +41,22 @@ export const ContactSection = () => {
           I'm always open to discussing new opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="space-y-8 md:w-2/3 md:pl-10">
+            <h3 className="text-2xl md:mt-8 font-semibold mb-6 md:ml-10 w-full">
               {" "}
               Contact Information
             </h3>
-
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
+            <div className="space-y-6">
+              {/* Email */}
+              <div className="grid grid-cols-[56px_1fr] items-start gap-4">
+                <div className="flex justify-center">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-medium"> Email</h4>
+                  <h4 className="font-medium">Email</h4>
                   <a
                     href="mailto:hello@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -63,12 +65,16 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+
+              {/* Phone */}
+              <div className="grid grid-cols-[56px_1fr] items-start gap-4">
+                <div className="flex justify-center">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium">Phone</h4>
                   <a
                     href="tel:+880177380336"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -77,29 +83,33 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
+
+              {/* Location */}
+              <div className="grid grid-cols-[56px_1fr] items-start gap-4">
+                <div className="flex justify-center">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <MapPin className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <h4 className="font-medium">Location</h4>
+                  <p className="text-muted-foreground hover:text-primary transition-colors">
                     Dhanmondi-32, Dhaka, Bangladesh
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8">
+            <div className="pt-8 mb-10">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/mostakinahmed/" target="_blank">
                   <Linkedin />
                 </a>
                 <a href="#" target="_blank">
                   <Twitter />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/" target="_blank">
                   <Instagram />
                 </a>
                 <a href="#" target="_blank">
