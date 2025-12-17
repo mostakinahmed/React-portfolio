@@ -75,7 +75,7 @@ export const Navbar = () => {
 
             {/* GitHub Button */}
             <a
-              href="https://github.com/your-username/your-repo"
+              href="https://github.com/mostakinahmed"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary 
