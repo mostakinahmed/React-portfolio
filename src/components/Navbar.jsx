@@ -37,7 +37,7 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground/80 "> Mosu's </span>{" "}
+            <span className="text-glow text-foreground/80 "> Mostakin's </span>{" "}
             Portfolio
           </span>
         </a>
