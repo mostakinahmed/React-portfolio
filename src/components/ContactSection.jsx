@@ -100,10 +100,13 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8 mb-10">
+            <div className="pt-8 mb-10 md:ml-13">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/mostakinahmed/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/mostakinahmed/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
                 <a href="#" target="_blank">
