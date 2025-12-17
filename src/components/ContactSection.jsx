@@ -100,7 +100,7 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8 mb-10 md:ml-13">
+            <div className="pt-8 mb-10 md:ml-15">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a
