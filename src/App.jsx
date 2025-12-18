@@ -3,12 +3,14 @@ import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
 import Video from "./components/Video";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Toaster />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
           <Route path="*" element={<NotFound />} />
