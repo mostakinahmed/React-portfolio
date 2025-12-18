@@ -73,7 +73,7 @@ const Video = () => {
 
             {/* All Photos & Videos */}
             <a
-              href={`https://drive.google.com/file/d/${fileId}/view`}
+              href={`https://drive.google.com/drive/folders/1esKj--YQk1U0aKzxuukihUTi14YN_Uur?usp=sharing`}
               target="_blank"
               rel="noopener noreferrer"
               className="
