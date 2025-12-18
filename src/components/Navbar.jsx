@@ -34,10 +34,13 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="text-xl font-bold text-primary">
+
+        <Link to="/" className="text-xl font-bold text-primary">
           <span className="text-glow text-foreground/80">Mostakin's</span>{" "}
           Portfolio
-        </a>
+        </Link>
+
+     
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
