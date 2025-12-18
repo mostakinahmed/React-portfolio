@@ -2,14 +2,14 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle 2";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "Home", href: "/" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  { name: "Social-Work", href: "/social-work-video" },
+  { name: "Social-Work", href: "/social-work-video", isRoute: true },
 ];
 
 export const Navbar = () => {
@@ -18,12 +18,13 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav
       className={cn(
@@ -32,101 +33,115 @@ export const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground/80 "> Mostakin's </span>{" "}
-            Portfolio
-          </span>
+        {/* Logo */}
+        <a href="#hero" className="text-xl font-bold text-primary">
+          <span className="text-glow text-foreground/80">Mostakin's</span>{" "}
+          Portfolio
         </a>
 
-        {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              className="text-foreground/90 hover:text-primary transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center space-x-8">
+          {/* Home */}
+          <Link
+            to="/"
+            className="text-foreground/90 hover:text-primary transition-colors duration-300"
+          >
+            Home
+          </Link>
 
-          <div className="flex items-center gap-6 -mt-0.5">
-            {/* Download Button */}
+          {/* Nav Items */}
+          {navItems.map((item, key) =>
+            item.isRoute ? (
+              <Link
+                key={key}
+                to={item.href}
+                className="text-foreground/90 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <a
+                key={key}
+                href={item.href}
+                className="text-foreground/90 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            )
+          )}
+
+          {/* Buttons */}
+          <div className="flex items-center gap-4">
             <a
               href="https://drive.google.com/drive/folders/1EipzLu88u3oyM-qLtYn2EPcGUKbOCKS6"
               target="_blank"
               rel="noopener noreferrer"
-              className=" hover:text-primary  
-      inline-flex items-center gap-2
-      rounded-md border border-border
-      bg-background px-4 py-1
-      text-sm font-medium text-foreground/90 
-      shadow-xs
-      transition-all duration-200
-      hover:bg-muted hover:shadow
-      active:scale-95
-    "
+              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-1 text-sm font-medium text-foreground/90 shadow transition hover:bg-muted active:scale-95"
             >
               ⬇ Download
             </a>
 
-            {/* GitHub Button */}
             <a
               href="https://github.com/mostakinahmed"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary 
-      inline-flex items-center gap-2
-      rounded-md border border-border
-      bg-background px-4 py-1
-      text-sm font-medium text-foreground/90 
-      shadow-xs
-      transition-all duration-200
-      hover:bg-muted hover:shadow
-      active:scale-95
-    "
+              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-1 text-sm font-medium text-foreground/90 shadow transition hover:bg-muted active:scale-95"
             >
               ⭐ GitHub
             </a>
           </div>
         </div>
 
-        {/* mobile nav */}
-
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="md:hidden p-2 text-foreground z-50"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
+        {/* Mobile Menu */}
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           )}
         >
           <div className="flex flex-col space-y-8 text-xl">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
+            {/* Home */}
+            <Link
+              to="/"
+              className="text-foreground/90 hover:text-primary transition-colors duration-300"
+            >
+              Home
+            </Link>
+            {navItems.map((item, key) =>
+              item.isRoute ? (
+                <Link
+                  key={key}
+                  to={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={key}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              )
+            )}
           </div>
-          <div className="mt-5 ">
+
+          <div className="mt-6">
             <ThemeToggle />
           </div>
         </div>
