@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import {Navbar} from "./Navbar";
+import { Navbar } from "./Navbar";
 import { ThemeToggle } from "./ThemeToggle";
 
 const mediaGallery = [
-
   {
     type: "video",
     title: "Social Work Documentary",
@@ -13,6 +12,11 @@ const mediaGallery = [
     type: "photo",
     title: "Relief Work",
     src: "https://via.placeholder.com/400x250",
+  },
+  {
+    type: "video",
+    title: "Social Work Documentary",
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     type: "document",
@@ -34,12 +38,17 @@ const mediaGallery = [
     title: "Volunteer Guidelines",
     src: "#",
   },
+  {
+    type: "video",
+    title: "Social Work Documentary",
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
 ];
 
 export default function MediaGallery() {
   return (
     <>
-    <ThemeToggle />
+      <ThemeToggle />
       <Navbar />
 
       <div className="md:pt-24 pt-18 px-4 max-w-7xl mx-auto">
