@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Navbar } from "./Navbar";
 import { ThemeToggle } from "./ThemeToggle";
+import { Footer } from "./Footer";
 
 const mediaGallery = [
   {
@@ -110,6 +111,7 @@ export default function MediaGallery() {
           ))}
         </motion.div>
       </div>
+      <Footer />
     </>
   );
 }
