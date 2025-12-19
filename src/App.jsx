@@ -4,8 +4,10 @@ import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
 import Video from "./components/Video";
 import ScrollToTop from "./components/ScrollToTop";
+import Media from "./components/Media";
 
 function App() {
+  
   return (
     <>
       <Toaster />
@@ -16,6 +18,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
 
           <Route path="/social-work-video" element={<Video />} />
+          <Route path="/media" element={<Media />} />
+
         </Routes>
       </BrowserRouter>
     </>

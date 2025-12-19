@@ -9,6 +9,7 @@ const navItems = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
+  { name: "Media", href: "/media", isRoute: true },
   { name: "Social-Work", href: "/social-work-video", isRoute: true },
 ];
 
@@ -39,8 +40,6 @@ export const Navbar = () => {
           <span className="text-glow text-foreground/80">Mostakin's</span>{" "}
           Portfolio
         </Link>
-
-     
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
@@ -76,21 +75,21 @@ export const Navbar = () => {
           {/* Buttons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://drive.google.com/drive/folders/1EipzLu88u3oyM-qLtYn2EPcGUKbOCKS6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-1 text-sm font-medium text-foreground/90 shadow transition hover:bg-muted active:scale-95"
-            >
-              ⬇ Download
-            </a>
-
-            <a
               href="https://github.com/mostakinahmed"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-1 text-sm font-medium text-foreground/90 shadow transition hover:bg-muted active:scale-95"
+              className="inline-flex hover:text-primary items-center gap-2 rounded-md border border-border bg-background px-4 py-1 text-sm font-medium text-foreground/90 shadow transition hover:bg-muted active:scale-95"
             >
               ⭐ GitHub
+            </a>
+
+            <a
+              href="https://drive.google.com/drive/folders/1EipzLu88u3oyM-qLtYn2EPcGUKbOCKS6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center  hover:text-primary gap-2 rounded-md border border-border bg-background px-4 py-1 text-sm font-medium text-foreground/90 shadow transition hover:bg-muted active:scale-95"
+            >
+              ⬇ Download
             </a>
           </div>
         </div>
