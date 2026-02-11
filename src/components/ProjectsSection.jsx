@@ -16,8 +16,19 @@ const projects = [
     description:
       "Interactive analytics dashboard with data visualization and filtering capabilities.",
     image: "https://i.ibb.co.com/Lfv2HHp/vic-home.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "https://victusbyte.top/home",
+    tags: ["TypeScript", "D3.js", "React.js", "NodeJs", " MongoDB"],
+    demoUrl: "https://victusbyte.com",
+    githubUrl: "#",
+  },
+  {
+    id: 2,
+    title: "Agro-Renewable IoT",
+    description:
+      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+    image:
+      "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-02-11%2021-20-32.png",
+    tags: ["javaScript", "D3.js", "React.js","Tailwind"],
+    demoUrl: "https://smartfarm.mostakinahmed.com/",
     githubUrl: "#",
   },
   {
