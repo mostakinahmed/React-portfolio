@@ -19,7 +19,7 @@ const Video = () => {
       {/* Main Content (Clean Background) */}
       <div className="relative z-10 min-h-screen w-full bg-white dark:bg-background flex flex-col items-center justify-center px-4">
         <h1 className="md:text-3xl text-2xl mt-5 font-bold md:mb-6 mb-3 text-center">
-          Our Social Work Video
+          Social Work Video
         </h1>
 
         {/* Video Card */}

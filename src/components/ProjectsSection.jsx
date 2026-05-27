@@ -1,119 +1,170 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
+ {
+    id: 4,
+    title: "Tech Landing Page",
+    description: "Modern API platform built with React and Tailwind.",
+    image: "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-05-28%2000-20-07.png",
+    tags: ["React", "TailwindCSS", "Supabase"],
+    demoUrl: "https://tech.mostakinahmed.com/",
+    githubUrl: "#",
+  },
+  {
+    id: 2,
+    title: "Victus Byte",
+    description: "Modern e-commerce platform with dashboard system.",
+    image: "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-05-28%2000-22-31.png",
+    tags: ["React", "NodeJs", "MongoDB"],
+    demoUrl: "https://victusbyte.com",
+    githubUrl: "#",
+  },
   {
     id: 1,
     title: "Bd Open Api",
-    description: "A beautiful landing page app using React and Tailwind.",
+    description: "Modern API platform built with React and Tailwind.",
     image: "https://i.ibb.co.com/ccBfBTY4/bdopeapi.png",
     tags: ["React", "TailwindCSS", "Supabase"],
     demoUrl: "https://bdopenapi.vercel.app/",
     githubUrl: "#",
   },
   {
-    id: 2,
-    title: "E-commerce - Victus Byte",
-    description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "https://i.ibb.co.com/Lfv2HHp/vic-home.png",
-    tags: ["TypeScript", "D3.js", "React.js", "NodeJs", " MongoDB"],
-    demoUrl: "https://victusbyte.com",
-    githubUrl: "#",
-  },
-  {
-    id: 2,
-    title: "Agro-Renewable IoT",
-    description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+    id: 3,
+    title: "Agro Renewable",
+    description: "IoT smart agriculture monitoring platform.",
     image:
       "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-02-11%2021-20-32.png",
-    tags: ["javaScript", "D3.js", "React.js","Tailwind"],
+    tags: ["React", "Tailwind", "IoT"],
     demoUrl: "https://smartfarm.mostakinahmed.com/",
     githubUrl: "#",
   },
-  {
+   {
     id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
+    title: "Puthi Kunjo",
+    description: "Modern API platform built with React and Tailwind.",
+    image:
+      "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-05-28%2000-39-27.png",
+    tags: ["React", "Tailwind", "IoT"],
+    demoUrl: "https://puthikunjo.mostakinahmed.com/",
     githubUrl: "#",
-  },
+  }
+    
+  
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary"> Projects </span>
-        </h2>
+    <section
+      id="projects"
+      className="py-20 px-4 bg-background text-foreground"
+    >
+      <div className="max-w-7xl mx-auto">
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
-        </p>
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-widest uppercase mb-4">
+            Portfolio
+          </span>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          <h2 className="text-3xl md:text-5xl font-black mb-4">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Selected projects focused on clean UI, performance, and modern web experiences.
+          </p>
+        </div>
+
+        {/* Compact Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          {projects.map((project) => (
             <div
-              key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              key={project.id}
+              className="group bg-card border border-border rounded overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="h-48 overflow-hidden">
+
+              {/* Image */}
+              <div className="relative h-62 overflow-hidden">
+
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+                {/* Top Buttons */}
+                <div className="absolute top-3 right-3 flex gap-2">
+
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    className="w-9 h-9 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all duration-300"
+                  >
+                    <ExternalLink size={16} />
+                  </a>
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="w-9 h-9 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all duration-300"
+                  >
+                    <Github size={16} />
+                  </a>
+                </div>
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+              {/* Content */}
+              <div className="p-5">
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-primary/10 text-primary border border-primary/10"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                {/* Title */}
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
-                  </div>
-                </div>
+
+                {/* Button */}
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 bg-primary hover:opacity-90 text-primary-foreground px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-300"
+                >
+                  View Project
+                  <ArrowRight size={16} />
+                </a>
               </div>
             </div>
           ))}
         </div>
 
+        {/* Bottom Button */}
         <div className="text-center mt-12">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
             href="https://github.com/mostakinahmed"
+            className="inline-flex items-center gap-2 border border-border bg-card hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300"
           >
-            Check My Github <ArrowRight size={16} />
+            Check My Github
+            <ArrowRight size={16} />
           </a>
         </div>
       </div>
