@@ -30,7 +30,7 @@ export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "all" || skill.category === activeCategory,
   );
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -48,7 +48,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full cursor-pointer transition-colors duration-300 capitalize",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  : "bg-secondary/70 text-forefround hover:bd-secondary",
               )}
             >
               {category}
@@ -60,7 +60,7 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 border border-b-amber-600/30 rounded-lg shadow-xs card-hover"
             >
               <div className="text-left mb-4">
                 <h3 className="font-semibold text-lg"> {skill.name}</h3>

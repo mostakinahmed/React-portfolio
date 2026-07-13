@@ -29,23 +29,18 @@ export const Navbar = () => {
         "fixed w-full z-50 transition-all duration-300",
         isScrolled
           ? "py-3 bg-background/70 backdrop-blur-xl border-b border-border shadow-md"
-          : "py-5 bg-transparent"
+          : "py-5 bg-transparent",
       )}
     >
       <div className="container flex items-center justify-between">
-
         {/* Logo */}
-        <Link
-          to="/"
-          className="text-xl md:text-2xl font-bold tracking-tight"
-        >
+        <Link to="/" className="text-xl md:text-2xl font-bold tracking-tight">
           <span className="text-primary">Mostakin</span>{" "}
           <span className="text-foreground/80">Portfolio</span>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
-
           {/* Links */}
           {navItems.map((item, key) =>
             item.isRoute ? (
@@ -64,7 +59,7 @@ export const Navbar = () => {
               >
                 {item.name}
               </a>
-            )
+            ),
           )}
 
           {/* GitHub */}
@@ -89,7 +84,6 @@ export const Navbar = () => {
             <Download size={16} />
             Download
           </a>
-
         </div>
 
         {/* Mobile Button */}
@@ -101,17 +95,18 @@ export const Navbar = () => {
         </button>
       </div>
 
+    
+
       {/* MOBILE MENU */}
       <div
         className={cn(
-          "fixed inset-0 z-40 flex flex-col items-center justify-center bg-background/90 backdrop-blur-xl transition-all duration-300 md:hidden",
+          "fixed top-[72px] left-0 right-0 bottom-0 z-40 bg-background/95 backdrop-blur-xl md:hidden transition-all duration-300 overflow-y-auto",
           isMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-5 pointer-events-none",
         )}
       >
-        <div className="flex flex-col gap-6 text-center">
-
+        <div className="flex flex-col items-center justify-center min-h-full gap-8 py-10">
           {/* Links */}
           {navItems.map((item, key) =>
             item.isRoute ? (
@@ -119,7 +114,7 @@ export const Navbar = () => {
                 key={key}
                 to={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-lg text-foreground/80 hover:text-primary transition"
+                className="text-xl font-medium text-foreground hover:text-primary transition"
               >
                 {item.name}
               </Link>
@@ -128,41 +123,39 @@ export const Navbar = () => {
                 key={key}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-lg text-foreground/80 hover:text-primary transition"
+                className="text-xl font-medium text-foreground hover:text-primary transition"
               >
                 {item.name}
               </a>
-            )
+            ),
           )}
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-col gap-3">
-
+          <div className="mt-4 flex flex-col gap-4 w-[220px]">
             <a
               href="https://github.com/mostakinahmed"
               target="_blank"
-              className="flex items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-2 text-sm"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-3 hover:border-primary transition"
             >
-              <Github size={16} />
+              <Github size={18} />
               GitHub
             </a>
 
             <a
               href="https://drive.google.com/drive/folders/1EipzLu88u3oyM-qLtYn2EPcGUKbOCKS6"
               target="_blank"
-              className="flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-semibold text-primary-foreground hover:scale-105 transition"
             >
-              <Download size={16} />
+              <Download size={18} />
               Download
             </a>
 
+            <div className="flex justify-center pt-2">
+              <ThemeToggle />
+            </div>
           </div>
-
-          {/* Theme */}
-          <div className="mt-6">
-            <ThemeToggle />
-          </div>
-
         </div>
       </div>
     </nav>
