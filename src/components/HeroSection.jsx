@@ -20,10 +20,10 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I create stellar web experiences with modern technologies.
-            Specializing in front-end development, I build interfaces that are
-            both beautiful and functional.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+            I am a full-stack MERN developer building robust front-end
+            interfaces and scalable back-end architectures, now deeply
+            enthusiastic about exploring Data Science and Machine Learning.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

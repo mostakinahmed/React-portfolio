@@ -35,8 +35,8 @@ export const Navbar = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-xl md:text-2xl font-bold tracking-tight">
-          <span className="text-primary">Mostakin</span>{" "}
-          <span className="text-foreground/80">Portfolio</span>
+          <span className="text-primary">Mosu's</span>{" "}
+          <span className="text-foreground/80">Folio</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -131,7 +131,7 @@ export const Navbar = () => {
           )}
 
           {/* Buttons */}
-          <div className="mt-4 flex flex-col gap-4 w-[220px]">
+          <div className="mt-4 flex flex-col gap-5 w-[220px]">
             <a
               href="https://github.com/mostakinahmed"
               target="_blank"

@@ -21,11 +21,11 @@ const projects = [
   },
   {
     id: 1,
-    title: "Bd Open Api",
+    title: "Bhumi Api",
     description: "Modern API platform built with React and Tailwind.",
-    image: "https://i.ibb.co.com/ccBfBTY4/bdopeapi.png",
+    image: "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-08-12%2021-57-35.png",
     tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "https://bdopenapi.vercel.app/",
+    demoUrl: "https://ba.mostakinahmed.com/",
     githubUrl: "#",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
   },
    {
     id: 3,
-    title: "Puthi Kunjo",
+    title: "Puthi Kunjo - OnGoing",
     description: "Modern API platform built with React and Tailwind.",
     image:
       "https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Screenshot%20from%202026-05-28%2000-39-27.png",
